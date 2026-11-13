@@ -1,3 +1,4 @@
+const usuario = []
 const usuarioController = {
     criarUsuario: (req, res) => {
         const { nome, email, senha } = req.body;
@@ -12,12 +13,12 @@ const usuarioController = {
         const emailMinusculo = String(email).toLowerCase();
         const senhaCriptografada = String(senha);
 
-        const novoUsuario = {
+        usuario.push(novoUsuario = {
             nome: nomeMaisculo,
             email: emailMinusculo,
             senha: senhaCriptografada,
             criadoEm: new Date().toISOString()
-        };
+        });
 
         // Chama a função para salvar o usuário no arquivo  
         const usuarioSalvo = usuarioModel.salvar(novoUsuario);
