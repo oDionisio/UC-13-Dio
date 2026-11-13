@@ -1,4 +1,5 @@
-const usuario = []
+const usuarios = [];
+
 const usuarioController = {
     criarUsuario: (req, res) => {
         const { nome, email, senha } = req.body;
@@ -13,26 +14,24 @@ const usuarioController = {
         const emailMinusculo = String(email).toLowerCase();
         const senhaCriptografada = String(senha);
 
-        usuario.push(novoUsuario = {
+        const novoUsuario = {
             nome: nomeMaisculo,
             email: emailMinusculo,
             senha: senhaCriptografada,
             criadoEm: new Date().toISOString()
-        });
+        };
 
-        // Chama a função para salvar o usuário no arquivo  
-        const usuarioSalvo = usuarioModel.salvar(novoUsuario);
+        usuarios.push(novoUsuario);
 
         // Retorna a resposta HTTP com o usuário criado (201)
         return res.status(201).json({
             sucesso: true,
             message: 'Usuário criado com sucesso',
-            usuario: usuarioSalvo || novoUsuario 
+            usuario: novoUsuario 
         });
     },
 
     listarUsuarios: (req, res) => {
-        const usuarios = usuarioModel.buscarTodos();
         return res.status(200).json({
             sucesso: true,
             message: 'Usuários listados com sucesso',
