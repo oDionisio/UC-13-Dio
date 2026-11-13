@@ -1,0 +1,18 @@
+[
+  {
+    "codigo": "067",
+    "nome": "NOTEBOOK",
+    "preco": 3500,
+    "qtde": 2,
+    "total": 7000,
+    "criadoEm": "2026-11-12T22:24:14.533Z"
+  },
+  {
+    "codigo": "P001",
+    "nome": "TECLADO MECÂNICO",
+    "preco": 250,
+    "qtde": 5,
+    "total": 1250,
+    "criadoEm": "2026-11-12T22:33:54.284Z"
+  }
+]
