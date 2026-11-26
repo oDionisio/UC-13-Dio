@@ -3,6 +3,7 @@ const router = express.Router();
 
 const produtoRoutes = require('./produtoRoutes');
 const usuarioRoutes = require('./usuarioRoutes');
+const categoriaRoutes = require('./categoriaRoutes');
 
 // Associa o prefixo /produtos ao arquivo produtoRoutes
 router.use('/produtos', produtoRoutes);
@@ -11,5 +12,7 @@ router.use('/produtos', produtoRoutes);
 router.use('/usuarios', usuarioRoutes);
 // const usuarioRoutes = require('./usuarioRoutes');
 // router.use('/usuarios', usuarioRoutes);
+
+router.use('/categorias', categoriaRoutes);
 
 module.exports = router;

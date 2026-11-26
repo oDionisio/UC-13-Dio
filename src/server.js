@@ -10,13 +10,13 @@ app.use(express.json());
 app.use(routes);
 
 app.listen(PORT, async () => {
-  console.log(`🚀 Servidor rodando na porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 
   try {
     await prisma.$connect();
-    console.log('🗄️  Conectado ao banco de dados MySQL com sucesso!');
+    console.log('Conectado ao banco de dados MySQL com sucesso!');
   } catch (error) {
-    console.error('❌ Falha ao conectar no MySQL. Verifique se o serviço está ligado!');
+    console.error('Falha ao conectar no MySQL. Verifique se o serviço está ligado!');
     console.error(error.message);
   }
 });
